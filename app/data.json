@@ -1,0 +1,63 @@
+[
+  {
+    "team": "red",
+    "members": [
+      {
+        "name": "John",
+        "picture": "https://i.pravatar.cc/302",
+        "id": 3,
+        "ranking": 1,
+        "debateScore": 0,
+        "platformScore": 0,
+        "rank": 3
+      },
+      {
+        "name": "Rojo",
+        "picture": "https://i.pravatar.cc/300",
+        "id": 1,
+        "ranking": 2,
+        "debateScore": 0,
+        "platformScore": 0,
+        "rank": 1
+      },
+      {
+        "name": "Mike",
+        "picture": "https://i.pravatar.cc/301",
+        "id": 2,
+        "ranking": 3,
+        "debateScore": 0,
+        "platformScore": 0,
+        "rank": 2
+      }
+    ]
+  },
+  {
+    "team": "blue",
+    "members": [
+      {
+        "name": "Jane",
+        "picture": "https://i.pravatar.cc/304",
+        "id": 5,
+        "ranking": 1,
+        "debateScore": 0,
+        "platformScore": 0
+      },
+      {
+        "name": "Doe",
+        "picture": "https://i.pravatar.cc/305",
+        "id": 6,
+        "ranking": 2,
+        "debateScore": 0,
+        "platformScore": 0
+      },
+      {
+        "name": "Blue",
+        "picture": "https://i.pravatar.cc/303",
+        "id": 4,
+        "ranking": 3,
+        "debateScore": 0,
+        "platformScore": 0
+      }
+    ]
+  }
+]

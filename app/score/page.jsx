@@ -26,7 +26,7 @@ const page = () => {
   }, []);
   return (
     <div className="flex h-full w-full justify-center text-base">
-      <div className="bg-red flex h-full w-full max-w-7xl flex-col gap-6 bg-green-500 px-8 py-4">
+      <div className="bg-red flex h-full w-full max-w-5xl flex-col gap-6 bg-green-500 px-8 py-4">
         <Header title="Ranking Teams" icon={<Score />} />
         <div className="flex w-full flex-col gap-2">
           <CardContainer initialTeam={redTeam} color="red" title="Team #1" />

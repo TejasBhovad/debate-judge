@@ -21,7 +21,11 @@ const CardContainer = ({ initialTeam, color, title }) => {
   }, [initialTeam]);
   return (
     <div className="relative flex h-auto w-full flex-col gap-1">
-      <span className={`text-lg font-semibold ${textColorClass}`}>{title}</span>
+      <span
+        className={`w-full text-center text-lg font-semibold ${textColorClass}`}
+      >
+        {title}
+      </span>
       <div className="flex flex-wrap justify-center gap-2">
         {team.length <= 2 ? (
           team.map((member) => <UserCard key={member.id} {...member} />)

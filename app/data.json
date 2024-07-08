@@ -3,22 +3,22 @@
     "team": "red",
     "members": [
       {
-        "name": "John",
-        "picture": "https://i.pravatar.cc/302",
-        "id": 3,
-        "ranking": 1,
-        "debateScore": 0,
-        "platformScore": 0,
-        "rank": 3
-      },
-      {
         "name": "Rojo",
         "picture": "https://i.pravatar.cc/300",
         "id": 1,
-        "ranking": 2,
+        "ranking": 1,
         "debateScore": 0,
         "platformScore": 0,
         "rank": 1
+      },
+      {
+        "name": "John",
+        "picture": "https://i.pravatar.cc/302",
+        "id": 3,
+        "ranking": 2,
+        "debateScore": 0,
+        "platformScore": 0,
+        "rank": 3
       },
       {
         "name": "Mike",

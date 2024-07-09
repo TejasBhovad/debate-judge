@@ -8,8 +8,8 @@
         "id": 2,
         "ranking": 1,
         "feedback": "Random feedback",
-        "debateScore": 1,
-        "platformScore": 5,
+        "debateScore": 4.5,
+        "platformScore": 1,
         "rank": 2
       },
       {
@@ -17,8 +17,8 @@
         "picture": "https://i.pravatar.cc/300",
         "id": 1,
         "ranking": 2,
-        "debateScore": 3.5,
-        "platformScore": 4,
+        "debateScore": 2.5,
+        "platformScore": 1.5,
         "feedback": "Random feedback",
         "rank": 1
       },
@@ -27,9 +27,9 @@
         "picture": "https://i.pravatar.cc/302",
         "id": 3,
         "ranking": 3,
-        "debateScore": 0,
+        "debateScore": 2,
         "feedback": "Random feedback",
-        "platformScore": 2.5,
+        "platformScore": 5,
         "rank": 3
       }
     ]
@@ -44,16 +44,16 @@
         "feedback": "Random feedback",
         "ranking": 1,
         "debateScore": 2.5,
-        "platformScore": 5
+        "platformScore": 2
       },
       {
         "name": "Jane",
         "picture": "https://i.pravatar.cc/304",
         "id": 5,
         "ranking": 2,
-        "debateScore": 4,
+        "debateScore": 1,
         "feedback": "Random feedback",
-        "platformScore": 2
+        "platformScore": 4.5
       },
       {
         "name": "Blue",
@@ -61,8 +61,8 @@
         "id": 4,
         "feedback": "Random feedback",
         "ranking": 3,
-        "debateScore": 0.5,
-        "platformScore": 0.5
+        "debateScore": 2,
+        "platformScore": 2
       }
     ]
   }

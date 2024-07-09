@@ -11,6 +11,11 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    outputFileTracingIncludes: {
+      "/api/another": ["./app/data.json"],
+    },
+  },
 };
 
 export default nextConfig;

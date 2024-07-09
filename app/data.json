@@ -3,31 +3,34 @@
     "team": "red",
     "members": [
       {
+        "name": "Mike",
+        "picture": "https://i.pravatar.cc/301",
+        "id": 2,
+        "ranking": 1,
+        "feedback": "Random feedback",
+        "debateScore": 1,
+        "platformScore": 5,
+        "rank": 2
+      },
+      {
         "name": "Rojo",
         "picture": "https://i.pravatar.cc/300",
         "id": 1,
-        "ranking": 1,
-        "debateScore": 0,
-        "platformScore": 0,
+        "ranking": 2,
+        "debateScore": 3.5,
+        "platformScore": 4,
+        "feedback": "Random feedback",
         "rank": 1
       },
       {
         "name": "John",
         "picture": "https://i.pravatar.cc/302",
         "id": 3,
-        "ranking": 2,
-        "debateScore": 0,
-        "platformScore": 0,
-        "rank": 3
-      },
-      {
-        "name": "Mike",
-        "picture": "https://i.pravatar.cc/301",
-        "id": 2,
         "ranking": 3,
         "debateScore": 0,
-        "platformScore": 0,
-        "rank": 2
+        "feedback": "Random feedback",
+        "platformScore": 2.5,
+        "rank": 3
       }
     ]
   },
@@ -35,28 +38,31 @@
     "team": "blue",
     "members": [
       {
-        "name": "Jane",
-        "picture": "https://i.pravatar.cc/304",
-        "id": 5,
-        "ranking": 1,
-        "debateScore": 0,
-        "platformScore": 0
-      },
-      {
         "name": "Doe",
         "picture": "https://i.pravatar.cc/305",
         "id": 6,
+        "feedback": "Random feedback",
+        "ranking": 1,
+        "debateScore": 2.5,
+        "platformScore": 5
+      },
+      {
+        "name": "Jane",
+        "picture": "https://i.pravatar.cc/304",
+        "id": 5,
         "ranking": 2,
-        "debateScore": 0,
-        "platformScore": 0
+        "debateScore": 4,
+        "feedback": "Random feedback",
+        "platformScore": 2
       },
       {
         "name": "Blue",
         "picture": "https://i.pravatar.cc/303",
         "id": 4,
+        "feedback": "Random feedback",
         "ranking": 3,
-        "debateScore": 0,
-        "platformScore": 0
+        "debateScore": 0.5,
+        "platformScore": 0.5
       }
     ]
   }

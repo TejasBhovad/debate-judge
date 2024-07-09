@@ -1,7 +1,7 @@
 "use client";
 import UserCard from "./UserCard";
 import React, { useState, useEffect } from "react";
-const CardContainer = ({ initialTeam, color, title }) => {
+const CardContainer = ({ initialTeam, color, title, fetchTeamData }) => {
   const [team, setTeam] = useState([]);
   const textColorClass = color === "blue" ? "text-teamBlue" : "text-teamRed";
   const borderColorClass =
@@ -33,16 +33,29 @@ const CardContainer = ({ initialTeam, color, title }) => {
           <>
             <div className="flex w-full justify-center gap-2">
               {team.slice(0, 2).map((member) => (
-                <UserCard key={member.id} {...member} />
+                <UserCard
+                  key={member.id}
+                  {...member}
+                  fetchTeamData={fetchTeamData}
+                />
               ))}
 
               {team.slice(2).map((member) => (
-                <UserCard key={member.id} {...member} hide={true} />
+                <UserCard
+                  key={member.id}
+                  {...member}
+                  hide={true}
+                  fetchTeamData={fetchTeamData}
+                />
               ))}
             </div>
             <div className="flex w-full justify-center gap-2 sm:hidden">
               {team.slice(2).map((member) => (
-                <UserCard key={member.id} {...member} />
+                <UserCard
+                  key={member.id}
+                  {...member}
+                  fetchTeamData={fetchTeamData}
+                />
               ))}
             </div>
           </>

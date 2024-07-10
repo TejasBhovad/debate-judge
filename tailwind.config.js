@@ -25,12 +25,12 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         primary: "#25A4EB",
         secondaryColor: "#2A5485",
-        teamRed: "#FFB3B3",
-        teamRedBorder: "#FFD9D9",
-        teamRedBackground: "#FFF5F5",
-        teamBlue: "#B3DAFF",
-        teamBlueBorder: "#D9EDFF",
-        teamBlueBackground: "#F5FAFF",
+        teamRed: "#f55d49",
+        teamRedBorder: "#ffb9b0",
+        teamRedBackground: "#fad2cd",
+        teamBlue: "#5cb0ff",
+        teamBlueBorder: "#96ceff",
+        teamBlueBackground: "#c2e2ff",
         utility: "#cccaca",
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -55,7 +55,7 @@ module.exports = {
       },
       backgroundColor: {
         base: "#F5F5F5",
-        secondary: "#EBEBEB",
+        secondary: "#ededed",
         muted: "#D9D9D9",
       },
       textColor: {

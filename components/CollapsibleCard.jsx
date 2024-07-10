@@ -24,7 +24,7 @@ const CollapsibleCard = ({
 
   return (
     <motion.div
-      className={`flex ${isExpanded ? "flex-row" : "flex-col"} w-full overflow-hidden rounded-md border-[1px] border-utility bg-secondary p-3`}
+      className={`flex ${isExpanded ? "flex-row" : "flex-col"} w-full overflow-hidden rounded-md border-[1px] border-utility/80 bg-base p-3`}
       initial={{ aspectRatio: "auto" }}
       animate={{
         aspectRatio: isExpanded ? "4/1" : "5 / 7",

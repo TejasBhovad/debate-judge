@@ -46,7 +46,7 @@ const CollapsibleCard = ({
           {!isExpanded && <div className="overlay-gradient"></div>}
           {!isExpanded && (
             <div className="absolute bottom-4">
-              <span className="p-5 text-3xl text-base font-semibold">
+              <span className="p-5 text-3xl font-semibold text-white">
                 {name}
               </span>
             </div>

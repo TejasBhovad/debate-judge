@@ -4,14 +4,14 @@ function StarHalf({ filled = false }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="52"
-      height="52"
-      style={{ fill: filled ? "white" : "none" }}
+      width="24"
+      height="24"
+      style={{ fill: filled ? "gold" : "none" }}
       viewBox="0 0 24 24"
     >
       <path
         // stroke="#000"
-        style={{ stroke: filled ? "white" : "currentColor" }}
+        style={{ stroke: filled ? "currentColor" : "currentColor" }}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

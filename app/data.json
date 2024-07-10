@@ -3,34 +3,37 @@
     "team": "red",
     "members": [
       {
-        "name": "Mike",
-        "picture": "https://i.pravatar.cc/301",
-        "id": 2,
-        "ranking": 1,
-        "feedback": "Random feedback",
-        "debateScore": 4.5,
-        "platformScore": 1,
-        "rank": 2
-      },
-      {
-        "name": "Rojo",
+        "_id": "668eabdc343fa92ad16c8dfe",
+        "name": "Rosa",
+        "team": "red",
         "picture": "https://i.pravatar.cc/300",
         "id": 1,
-        "ranking": 2,
-        "debateScore": 2.5,
-        "platformScore": 1.5,
-        "feedback": "Random feedback",
-        "rank": 1
+        "ranking": 1,
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
       },
       {
-        "name": "John",
+        "_id": "668eae90343fa92ad16c8e00",
+        "name": "Higer",
+        "team": "red",
+        "picture": "https://i.pravatar.cc/301",
+        "id": 2,
+        "ranking": 2,
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
+      },
+      {
+        "_id": "668eaeaf343fa92ad16c8e01",
+        "name": "Lamy",
+        "team": "red",
         "picture": "https://i.pravatar.cc/302",
         "id": 3,
         "ranking": 3,
-        "debateScore": 2,
-        "feedback": "Random feedback",
-        "platformScore": 5,
-        "rank": 3
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
       }
     ]
   },
@@ -38,31 +41,37 @@
     "team": "blue",
     "members": [
       {
-        "name": "Doe",
-        "picture": "https://i.pravatar.cc/305",
-        "id": 6,
-        "feedback": "Random feedback",
+        "_id": "668eaecc343fa92ad16c8e02",
+        "name": "Sage",
+        "team": "blue",
+        "picture": "https://i.pravatar.cc/303",
+        "id": 4,
         "ranking": 1,
-        "debateScore": 2.5,
-        "platformScore": 2
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
       },
       {
-        "name": "Jane",
+        "_id": "668eaee8343fa92ad16c8e03",
+        "name": "Marry",
+        "team": "blue",
         "picture": "https://i.pravatar.cc/304",
         "id": 5,
         "ranking": 2,
-        "debateScore": 1,
-        "feedback": "Random feedback",
-        "platformScore": 4.5
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
       },
       {
-        "name": "Blue",
-        "picture": "https://i.pravatar.cc/303",
-        "id": 4,
-        "feedback": "Random feedback",
+        "_id": "668eaf02343fa92ad16c8e04",
+        "name": "Jane",
+        "team": "blue",
+        "picture": "https://i.pravatar.cc/305",
+        "id": 6,
         "ranking": 3,
-        "debateScore": 2,
-        "platformScore": 2
+        "feedback": "-1",
+        "debateScore": -1,
+        "platformScore": -1
       }
     ]
   }

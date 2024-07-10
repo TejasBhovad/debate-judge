@@ -1,10 +1,13 @@
 "use client";
 import { updateTeam } from "@/app/data";
-import { Reorder } from "framer-motion";
+import { updateMembers } from "@/app/queries";
+import CollapsibleCard from "./CollapsibleCard";
+import { Reorder, useDragControls } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import ProfileHor from "./ProfileHor";
-const TeamContainer = ({ initialTeam, color, title }) => {
+
+const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
   const [team, setTeam] = useState([]);
+  const [isDragging, setIsDragging] = useState(false);
 
   const textColorClass = color === "blue" ? "text-teamBlue" : "text-teamRed";
   const borderColorClass =
@@ -13,7 +16,6 @@ const TeamContainer = ({ initialTeam, color, title }) => {
     color === "blue" ? "bg-teamBlueBackground" : "bg-teamRedBackground";
 
   useEffect(() => {
-    // Ensure initialTeam is an array before mapping
     if (Array.isArray(initialTeam)) {
       const teamWithRank = initialTeam.map((member, index) => ({
         ...member,
@@ -22,6 +24,9 @@ const TeamContainer = ({ initialTeam, color, title }) => {
       setTeam(teamWithRank);
     }
   }, [initialTeam]);
+
+  const dragControls = useDragControls();
+
   return (
     <div className="relative flex h-auto w-full flex-col gap-1 sm:w-1/2">
       <span className={`text-lg font-semibold ${textColorClass}`}>{title}</span>
@@ -33,12 +38,11 @@ const TeamContainer = ({ initialTeam, color, title }) => {
         onReorder={(newTeam) => {
           const updatedTeam = newTeam.map((member, index) => ({
             ...member,
-            ranking: index + 1, // Update rank based on new position
+            ranking: index + 1,
           }));
           console.log("Updated team:", updatedTeam);
-          //   update team in dat.js based on color
-          updateTeam(color, updatedTeam);
-
+          // updateTeam(color, updatedTeam);
+          updateMembers(color, updatedTeam);
           setTeam(updatedTeam);
         }}
       >
@@ -47,7 +51,14 @@ const TeamContainer = ({ initialTeam, color, title }) => {
             <Reorder.Item
               key={member.id}
               value={member}
-              className="flex h-20 w-full cursor-grab"
+              className="flex h-auto w-full cursor-grab"
+              dragControls={dragControls}
+              onDragStart={() => setIsDragging(true)} // Set isDragging to true when drag starts
+              onDragEnd={() => {
+                setTimeout(() => {
+                  setIsDragging(false); // Set isDragging to false after a delay when drag ends
+                }, 600); // Adjusted delay to match the comment
+              }}
             >
               <div className="flex h-full w-16 items-center justify-center">
                 <span
@@ -60,15 +71,19 @@ const TeamContainer = ({ initialTeam, color, title }) => {
                   #{index + 1}
                 </span>
               </div>
-              <ProfileHor
+              <CollapsibleCard
                 name={member.name}
                 id={member.id}
                 picture={member.picture}
+                isDragging={isDragging}
+                debateScoreInit={member.debateScore}
+                platformScoreInit={member.platformScore}
+                feedbackInit={member.feedback}
+                fetchTeamData={fetchTeamData}
               />
             </Reorder.Item>
           ))}
       </Reorder.Group>
-      {/* <span>{JSON.stringify(team)}</span> */}
     </div>
   );
 };

@@ -1,0 +1,69 @@
+[
+  {
+    "team": "red",
+    "members": [
+      {
+        "name": "Mike",
+        "picture": "https://i.pravatar.cc/301",
+        "id": 2,
+        "ranking": 1,
+        "feedback": "Random feedback",
+        "debateScore": 4.5,
+        "platformScore": 1,
+        "rank": 2
+      },
+      {
+        "name": "Rojo",
+        "picture": "https://i.pravatar.cc/300",
+        "id": 1,
+        "ranking": 2,
+        "debateScore": 2.5,
+        "platformScore": 1.5,
+        "feedback": "Random feedback",
+        "rank": 1
+      },
+      {
+        "name": "John",
+        "picture": "https://i.pravatar.cc/302",
+        "id": 3,
+        "ranking": 3,
+        "debateScore": 2,
+        "feedback": "Random feedback",
+        "platformScore": 5,
+        "rank": 3
+      }
+    ]
+  },
+  {
+    "team": "blue",
+    "members": [
+      {
+        "name": "Doe",
+        "picture": "https://i.pravatar.cc/305",
+        "id": 6,
+        "feedback": "Random feedback",
+        "ranking": 1,
+        "debateScore": 2.5,
+        "platformScore": 2
+      },
+      {
+        "name": "Jane",
+        "picture": "https://i.pravatar.cc/304",
+        "id": 5,
+        "ranking": 2,
+        "debateScore": 1,
+        "feedback": "Random feedback",
+        "platformScore": 4.5
+      },
+      {
+        "name": "Blue",
+        "picture": "https://i.pravatar.cc/303",
+        "id": 4,
+        "feedback": "Random feedback",
+        "ranking": 3,
+        "debateScore": 2,
+        "platformScore": 2
+      }
+    ]
+  }
+]

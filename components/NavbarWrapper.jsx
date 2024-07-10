@@ -1,15 +1,16 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { resetData, randomizeData } from "@/app/data";
+import { resetMembers, dummyValues } from "@/app/queries";
 import Link from "next/link";
 import { Button } from "./ui/button";
 const Navbar = () => {
   const handleReset = async () => {
-    await resetData();
+    await resetMembers();
     window.location.reload();
   };
   const handleRandomize = async () => {
-    await randomizeData();
+    await dummyValues();
     window.location.reload();
   };
   return (
@@ -18,10 +19,6 @@ const Navbar = () => {
         debsoc.
       </Link>
       <div className="flex h-full w-auto gap-4 py-2">
-        <Avatar>
-          <AvatarImage src="https://i.pravatar.cc/300" alt="Profile picture" />
-          <AvatarFallback>U</AvatarFallback>
-        </Avatar>
         <Button
           className="h-10 border-[1px] border-utility bg-muted hover:bg-muted/80"
           onClick={handleReset}
@@ -32,7 +29,7 @@ const Navbar = () => {
           className="h-10 border-[1px] border-utility bg-muted hover:bg-muted/80"
           onClick={handleRandomize}
         >
-          Randomize Data
+          Dummy Data
         </Button>
       </div>
     </nav>

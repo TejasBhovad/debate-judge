@@ -1,7 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Dropdown from "./logos/Dropdown";
-import { Button } from "./ui/button";
 import TabsContainer from "./TabsContainer";
 import Image from "next/image";
 import { useState } from "react";

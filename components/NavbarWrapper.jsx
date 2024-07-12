@@ -1,6 +1,4 @@
 "use client";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { resetData, randomizeData } from "@/app/data";
 import { resetMembers, dummyValues } from "@/app/queries";
 import Link from "next/link";
 import { Button } from "./ui/button";

@@ -1,5 +1,4 @@
 "use client";
-import { updateTeam } from "@/app/data";
 import { updateMembers } from "@/app/queries";
 import CollapsibleCard from "./CollapsibleCard";
 import { Reorder, useDragControls } from "framer-motion";

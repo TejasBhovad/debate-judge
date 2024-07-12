@@ -4,13 +4,12 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Medal from "@/components/logos/Medal";
 import TeamContainer from "@/components/TeamContainer";
-import { getTeamData } from "./data";
+
 import { useEffect, useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { checkMembers } from "./queries";
 import { getMembers } from "./queries";
 const page = () => {
-  const [teamData, setTeamData] = useState({});
   const [redTeam, setRedTeam] = useState([]);
   const [blueTeam, setBlueTeam] = useState([]);
   const fetchTeamData = async () => {

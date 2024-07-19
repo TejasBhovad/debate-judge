@@ -11,6 +11,7 @@ import { checkMembers } from "./queries";
 import { getMembers } from "./queries";
 const page = () => {
   const [redTeam, setRedTeam] = useState([]);
+
   const [blueTeam, setBlueTeam] = useState([]);
   const fetchTeamData = async () => {
     const data = await getMembers(); // Assuming this fetches the array of members
@@ -81,7 +82,7 @@ const page = () => {
         </div>
 
         <Button
-          className="h-12 w-full bg-primary text-white"
+          className="h-full w-full bg-black text-white hover:bg-black/80"
           onClick={checkDataValid}
         >
           Submit

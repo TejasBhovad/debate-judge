@@ -1,5 +1,4 @@
 import React from "react";
-import { setPlatformScoreUser } from "@/app/data";
 import { updatePlatformScore } from "@/app/queries";
 import Star from "@/components/logos/Star";
 import StarHalf from "@/components/logos/StarHalf";
@@ -9,24 +8,22 @@ import { useEffect } from "react";
 import { Button } from "./ui/button";
 const PlatformScore = ({ fetchTeamData, id, platformScoreInit }) => {
   const [platformScore, setPlatformScore] = useState(platformScoreInit);
-  const [sliderValue, setSliderValue] = useState([0]);
+  const [platformSlider, setPlatformSlider] = useState([0]);
 
   const handleSubmit = async () => {
-    // await setPlatformScoreUser(id, platformScore / 2);
     await updatePlatformScore(id, platformScore / 2);
     console.log("Debate score submitted", platformScore);
-    setSliderValue([0]);
+    setPlatformSlider([0]);
     setPlatformScore(0);
     fetchTeamData();
   };
 
   useEffect(() => {
-    console.log("Debate score changed to", sliderValue);
-    const snapValue = Math.round(sliderValue / 12.5) * 12.5;
+    console.log("Debate score changed to", platformSlider);
+    const snapValue = Math.round(platformSlider / 12.5) * 12.5;
     setPlatformScore(snapValue / 12.5);
     console.log("Debate score snapped to", snapValue);
-    // handleSubmit();
-  }, [sliderValue]);
+  }, [platformSlider]);
 
   useEffect(() => {
     if (platformScoreInit === -1) {
@@ -38,11 +35,12 @@ const PlatformScore = ({ fetchTeamData, id, platformScoreInit }) => {
   }, [platformScoreInit]);
   return (
     <div className="flex h-full w-full flex-col gap-2">
+      <span className="px-3">Platform Score</span>
       <div className="flex h-1/2 w-full items-center">
-        <div className="relative flex h-full w-2/3 text-base/50">
+        <div className="relative flex h-full w-1/2 text-base/50">
           <Slider
-            value={sliderValue}
-            onValueChange={(value) => setSliderValue(value)}
+            value={platformSlider}
+            onValueChange={(value) => setPlatformSlider(value)}
             min={0}
             max={125}
             step={1}
@@ -105,7 +103,7 @@ const PlatformScore = ({ fetchTeamData, id, platformScoreInit }) => {
             </div>
           </div>
         </div>
-        <div className="text-md flex h-full w-1/3 items-center justify-center px-2 font-medium">
+        <div className="text-md flex h-full w-1/2 items-center justify-end px-2 font-medium">
           <span className="flex w-20 items-center justify-center rounded-md bg-utility px-1 py-1 text-center text-sm">
             {(platformScore / 2).toFixed(1)}/5
           </span>

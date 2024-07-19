@@ -7,12 +7,7 @@ import React, { useState, useEffect } from "react";
 const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
   const [team, setTeam] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
-
-  const textColorClass = color === "blue" ? "text-teamBlue" : "text-teamRed";
-  const borderColorClass =
-    color === "blue" ? "border-teamBlueBorder" : "border-teamRedBorder";
-  const backgroundColorClass =
-    color === "blue" ? "bg-teamBlueBackground" : "bg-teamRedBackground";
+  const [stopDragging, setStopDragging] = useState(false);
 
   useEffect(() => {
     if (Array.isArray(initialTeam)) {
@@ -28,10 +23,10 @@ const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
 
   return (
     <div className="relative flex h-auto w-full flex-col gap-1 sm:w-1/2">
-      <span className={`text-lg font-semibold ${textColorClass}`}>{title}</span>
+      <span className={`px-2 text-lg font-semibold text-black`}>{title}</span>
 
       <Reorder.Group
-        className={`flex h-auto w-full flex-col gap-2 rounded-md border-[1.5px] p-2 ${borderColorClass} ${backgroundColorClass}`}
+        className={`bg-/0 flex h-auto w-full flex-col gap-2 rounded-md p-2`}
         layout
         values={team}
         onReorder={(newTeam) => {
@@ -40,7 +35,6 @@ const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
             ranking: index + 1,
           }));
           console.log("Updated team:", updatedTeam);
-          // updateTeam(color, updatedTeam);
           updateMembers(color, updatedTeam);
           setTeam(updatedTeam);
         }}
@@ -50,23 +44,17 @@ const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
             <Reorder.Item
               key={member.id}
               value={member}
-              className="flex h-auto w-full cursor-grab"
-              dragControls={dragControls}
-              onDragStart={() => setIsDragging(true)} // Set isDragging to true when drag starts
+              className={`flex h-auto w-full select-none rounded-md border-[1px] border-black/0 bg-white shadow-sm ${stopDragging ? "" : "cursor-grab"}`}
+              drag={stopDragging ? false : true}
+              onDragStart={() => setIsDragging(true)}
               onDragEnd={() => {
                 setTimeout(() => {
-                  setIsDragging(false); // Set isDragging to false after a delay when drag ends
-                }, 600); // Adjusted delay to match the comment
+                  setIsDragging(false);
+                }, 600);
               }}
             >
-              <div className="flex h-full w-16 items-center justify-center">
-                <span
-                  className={`rounded-sm bg-clip-text text-xl font-bold text-transparent ${
-                    color === "blue"
-                      ? "bg-gradient-to-br from-blue-400 to-blue-800"
-                      : "bg-gradient-to-br from-red-400 to-red-800"
-                  }`}
-                >
+              <div className="flex h-full w-auto items-start justify-start">
+                <span className="text-md rounded-sm p-2 font-semibold text-black">
                   #{index + 1}
                 </span>
               </div>
@@ -79,6 +67,7 @@ const TeamContainer = ({ initialTeam, color, title, fetchTeamData }) => {
                 platformScoreInit={member.platformScore}
                 feedbackInit={member.feedback}
                 fetchTeamData={fetchTeamData}
+                setStopDragging={setStopDragging}
               />
             </Reorder.Item>
           ))}
